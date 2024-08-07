@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .input-area {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+    }
+    .outer {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 50px;
+    }
+    .inner {
+      width: 45%;
+      border: 1px solid black;
+      padding: 10px;
+      word-wrap: break-word;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body class="body">
+<script type="module" src="/main.js"></script>
+<h1>Noir app</h1>
+<div class="input-area">
+  <input id="guessInput" type="number" placeholder="Enter your guess" />
+  <button id="submitGuess" style="margin-top: 15px">Submit Guess</button>
+</div>
+<div class="outer">
+  <div id="logs" class="inner"><h2>Logs</h2></div>
+  <div id="results" class="inner"><h2>Proof</h2></div>
+</div>
+<button id="verify" style="margin-top: 20px;"> Verify </button>
+</body>
+</html>
