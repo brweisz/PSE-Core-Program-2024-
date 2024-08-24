@@ -6,13 +6,12 @@ def main(*argv, **kwargs):
     hash_value = argv[4]
     cropped_image = [9]*(height*width)
     original_image = [9]*(cr_height*cr_width)
-    witness = f'''original_image = {original_image}'''
+    offset_x = 14
+    offset_y = 14
+    crop_size = (cr_height, cr_width)
+    witness = f'''original_image = {original_image}\nhash = "{hash_value}"\noffset_x = {offset_x}\noffset_y = {offset_y}\ncropped_image = {cropped_image}\ncrop_size={crop_size}'''
     print(witness)
 
 if __name__ == "__main__":
-    main(500, 500, 200, 200, "")
+    main(30, 30, 5, 5, 0xa)
 
-#hash = "{hash_value}"\n
-#offset_x = 100\n
-#offset_y = 100\n
-#cropped_image = {cropped_image}\n
